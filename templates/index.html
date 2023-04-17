@@ -1,0 +1,26 @@
+<!doctype html>
+<title>Employees Tree View</title>
+
+<head>
+    <h1>Employees Tree View</h1>
+</head>
+
+<body>
+<div>
+    {% block body %}
+    {% if data %}
+    <ul>
+        {%- for key, value in data.items() recursive %}
+        <li>{{ value.full_name }}. Job title: {{ value.job_title }}
+            {%- if value.subordinates.items() -%}
+            <ul>{{ loop(value.subordinates.items()) }}</ul>
+            {%- endif %}
+        </li>
+        {%- endfor %}
+    </ul>
+    {% else %}
+    <div>No employees</div>
+    {% endif %}
+    {% endblock %}
+</div>
+</body>

@@ -1,7 +1,12 @@
 # Employees app
 A web page that displays the hierarchy of employees in a tree form.
 
-* Url: http://localhost/employees
+* Url: http://localhost/employees  
+
+### Technologies
+* Python 3.11
+* aiohttp 3.8 
+* PostgreSQL 14.7
 
 ## Run app
 ### Create .env
